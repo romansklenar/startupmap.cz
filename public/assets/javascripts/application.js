@@ -78,38 +78,14 @@ $(document).ready(function() {
 
     function focusStartup(index) {
       var marker = markers[index];
-      var address = [ marker.data.address, marker.data.city ].filter(function(e) { return $.trim(e) }).join(', ');
-
-      var geocoder = new google.maps.Geocoder();
-      geocoder.geocode({ 'address': address }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          console.log("Located startup " + marker.data.name + " @ " + address)
-          map.setCenter(results[0].geometry.location);
-          map.fitBounds(results[0].geometry.viewport);
-        } else {
-          console.log("Couldn't locate startup " + marker.data.name + " @ " + address)
-          map.setCenter(marker.position);
-          map.setZoom(14);
-        }
-      });
+      map.setCenter(marker.position);
+      map.setZoom(14);
 
       infoWindow.setOptions({
         content: window_template.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
         maxWidth: 280
       });
       infoWindow.open(map, marker);
-    };
-
-    function focusAddress(address) {
-      geocoder.geocode({ 'address': address }, function(results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-          new google.maps.Marker({ position: results[0].geometry.location, map: map, icon: image });
-          map.setCenter(results[0].geometry.location);
-          map.fitBounds(results[0].geometry.viewport); // map.setZoom(14);
-        } else {
-          alert( 'Could not find specified address (' + status + ').' );
-        }
-      });
     };
 
   };
