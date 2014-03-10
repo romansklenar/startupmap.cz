@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <link type="text/css" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+    <link type="text/css" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&subset=latin,latin-ext" rel="stylesheet">
+    <link type="text/css" href="/assets/stylesheets/application.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js"></script>
+    <script type="text/javascript" src="/assets/javascripts/application.js"></script>
+  </head>
+  <body>
+    <div class="row">
+
+      <div id="sidebar" class="col-xs-2">
+        <header>
+          <a id="logo" href="#"><img src="/assets/images/logo.png"></a>
+          <p>
+            StartupMap is a platform which shows how many startups are placed in Czech Republic.<br/>
+            Add your company and be a part of StartupMap.
+          </p>
+        </header>
+
+        <nav class="list-group">
+          <a href="#" class="list-group-item active">Startups <span id="counter" class="badge pull-right"></span></a>
+        </nav>
+
+        <footer>
+          <a href="http://www.startupjobs.cz/o-startupjobs">About</a>
+          <a href="http://www.startupjobs.cz/pro-firmy">Add Startup</a>
+          <a href="http://www.startupjobs.cz/">StartupJobs</a>
+        </footer>
+      </div>
+
+      <div class="col-xs-10">
+        <div class="google-map-canvas" id="map-canvas"></div>
+      </div>
+
+    </div>
+  </body>
+</html>

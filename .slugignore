@@ -1,0 +1,7 @@
+*.psd
+*.pdf
+*.zip
+/tmp
+/test
+/spec
+/meta
