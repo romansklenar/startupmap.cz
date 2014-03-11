@@ -8,7 +8,7 @@ $(document).ready(function() {
     var mapOptions = {
       zoom: 8,
       center: new google.maps.LatLng(49.8037633,15.4749126),
-      scrollwheel: false,
+      scrollwheel: true,
       panControl: false,
       streetViewControl: false,
       mapTypeControl: true,
@@ -57,7 +57,7 @@ $(document).ready(function() {
           markers.push(marker);
 
         });
-        var markerCluster = new MarkerClusterer(map, markers, { gridSize: 50 });
+        var markerCluster = new MarkerClusterer(map, markers, { gridSize: 50, maxZoom: 13 });
 
         $('#sidebar-wrapper #counter').text($('#sidebar-wrapper nav a.startup').length);
         $('#sidebar-wrapper nav a.startup').on('click', function() {
