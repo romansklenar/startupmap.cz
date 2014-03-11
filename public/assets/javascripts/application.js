@@ -52,15 +52,15 @@ $(document).ready(function() {
           });
 
           var link = menu_template.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, index: markers.length });
-          $("#sidebar nav").append(link);
+          $("#sidebar-wrapper nav").append(link);
 
           markers.push(marker);
 
         });
         var markerCluster = new MarkerClusterer(map, markers, { gridSize: 50 });
 
-        $('#sidebar #counter').text($('#sidebar nav a.startup').length);
-        $('#sidebar nav a.startup').on('click', function() {
+        $('#sidebar-wrapper #counter').text($('#sidebar-wrapper nav a.startup').length);
+        $('#sidebar-wrapper nav a.startup').on('click', function() {
           focusStartup($(this).data('index'));
           return false;
         });
