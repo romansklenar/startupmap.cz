@@ -89,15 +89,14 @@ body {
 }
 
 #sidebar-wrapper a.list-group-item:hover,
-#sidebar-wrapper a.list-group-item:focus {
+#sidebar-wrapper a.list-group-item:focus,
+#sidebar-wrapper a.list-group-item.active {
   background-color: #21242B;
   border-color: #FD2922;
   color: #CCCFDC;
 }
 
-#sidebar-wrapper a.list-group-item.active,
-#sidebar-wrapper a.list-group-item.active:hover,
-#sidebar-wrapper a.list-group-item.active:focus {
+#sidebar-wrapper a.list-group-item.brand {
   color: white;
   font-size: 16px;
   font-weight: 200;
@@ -106,17 +105,17 @@ body {
   padding: 15px 20px;
 }
 
-#sidebar-wrapper a.list-group-item:first-child,
-#sidebar-wrapper a.list-group-item:last-child {
-  border-radius: 0;
-}
-
 #sidebar-wrapper a.list-group-item > .badge,
 #sidebar-wrapper a.list-group-item.active > .badge {
   color: inherit;
   background-color: #3B4050;
   font-weight: 200;
   font-size: 16px;
+}
+
+#sidebar-wrapper a.list-group-item:first-child,
+#sidebar-wrapper a.list-group-item:last-child {
+  border-radius: 0;
 }
 
 #sidebar-wrapper .badge {

@@ -59,11 +59,14 @@ $(document).ready(function() {
         });
         var markerCluster = new MarkerClusterer(map, markers, { gridSize: 50, maxZoom: 13 });
 
-        $('#sidebar-wrapper #counter').text($('#sidebar-wrapper nav a.startup').length);
-        $('#sidebar-wrapper nav a.startup').on('click', function() {
+        var startups = $('#sidebar-wrapper nav a.startup');
+        startups.on('click', function() {
           focusStartup($(this).data('index'));
+          startups.removeClass('active');
+          $(this).addClass('active');
           return false;
         });
+        $('#sidebar-wrapper #counter').text(startups.length);
 
       },
       error: function (xhr, ajaxOptions, thrownError) {
