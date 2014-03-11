@@ -28,8 +28,8 @@ $(document).ready(function() {
     var markers = [];
 
     var image = 'assets/images/pin_normal.png';
-    var window_template = '<div class="startup"><div class="heading"><h4><a href="{url}" target="_blank">{name}</a><br><small>{address}</small></h4></div><hr><div class="body"><p>{description}</p></div></div>'
-    var menu_template   = '<a href="#" data-index="{index}" class="startup list-group-item">{name}</a>'
+    var windowTemplate = '<div class="startup"><div class="heading"><h4><a href="{url}" target="_blank">{name}</a><br><small>{address}</small></h4></div><hr><div class="body"><p>{description}</p></div></div>'
+    var menuTemplate   = '<a href="#" data-index="{index}" class="startup list-group-item">{name}</a>'
 
     $.ajax({
       url: "/feed.json", // "http://www.startupjobs.cz/map.php"
@@ -45,13 +45,13 @@ $(document).ready(function() {
 
           google.maps.event.addListener(marker, 'click', function() {
             infoWindow.setOptions({
-              content: window_template.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
+              content: windowTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
               maxWidth: 280
             });
             infoWindow.open(map, marker);
           });
 
-          var link = menu_template.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, index: markers.length });
+          var link = menuTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, index: markers.length });
           $("#sidebar-wrapper nav").append(link);
 
           markers.push(marker);
@@ -85,7 +85,7 @@ $(document).ready(function() {
       map.setZoom(14);
 
       infoWindow.setOptions({
-        content: window_template.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
+        content: windowTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
         maxWidth: 280
       });
       infoWindow.open(map, marker);
