@@ -44,12 +44,9 @@ $(document).ready(function() {
           var marker = new google.maps.Marker({ title: this.name, position: position, map: map, icon: image, data: this });
 
           google.maps.event.addListener(marker, 'click', function() {
-            infoWindow.setOptions({
-              content: windowTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
-              maxWidth: 280
-            });
-            infoWindow.open(map, marker);
+            openInfoWindow(marker);
           });
+          google.maps.event.addListener(map, 'click', closeInfoWindow);
 
           var link = menuTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, index: markers.length });
           $("#sidebar-wrapper nav").append(link);
@@ -76,6 +73,7 @@ $(document).ready(function() {
 
     $('a#logo').click(function() {
       map.setOptions(mapOptions);
+      closeInfoWindow();
       return false;
     });
 
@@ -83,12 +81,20 @@ $(document).ready(function() {
       var marker = markers[index];
       map.setCenter(marker.position);
       map.setZoom(14);
+      openInfoWindow(marker);
+    };
 
+    function openInfoWindow(marker) {
       infoWindow.setOptions({
         content: windowTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
         maxWidth: 280
       });
       infoWindow.open(map, marker);
+    };
+
+    function closeInfoWindow() {
+      infoWindow.close();
+      $('#sidebar-wrapper nav a.startup').removeClass('active');
     };
 
   };
