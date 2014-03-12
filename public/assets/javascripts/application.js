@@ -67,7 +67,7 @@ $(document).ready(function() {
 
       },
       error: function (xhr, ajaxOptions, thrownError) {
-        alert( 'Could not load data.' );
+        alert( 'Nelze načíst datový zdroj.' );
       }
     });
 
