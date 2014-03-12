@@ -24,7 +24,7 @@ body {
   left: 240px;
   width: 240px;
   background: #363A47;
-  color: #636A7F;
+  color: #747d93;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -99,7 +99,7 @@ body {
   font-size: 16px;
   font-weight: 200;
   background-color: #494F60;
-  border-left: 5px #FF0000 solid;
+  border-left: 5px #ec503b solid;
   padding: 15px 20px;
 }
 
@@ -145,7 +145,7 @@ div.startup .heading h4 small {
 }
 
 div.startup .body p {
-  color: #87888C;
+  color: #636467;
   font-size: 15px;
 }
 
