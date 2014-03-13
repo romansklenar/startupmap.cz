@@ -70,7 +70,6 @@
     <script type="text/javascript" src="http://google-maps-utility-library-v3.googlecode.com/svn/trunk/markerclusterer/src/markerclusterer_compiled.js"></script>
     <script type="text/javascript" src="/assets/javascripts/application.js"></script>
     <script type="text/javascript">
-
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-4980162-53']);
       _gaq.push(['_setDomainName', 'startupmap.cz']);
@@ -81,7 +80,23 @@
         ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
-
     </script>
+
+    <!-- AddThis Smart Layers START -->
+    <script type="text/javascript">
+      var addthis_share = {
+        url: "https://www.startupmap.cz",
+        title: "Podívejte se na mapu českých startupů!",
+        templates : { twitter : "{{title}} #startupmapcz via @StartupJobscz" }
+      }
+    </script>
+    <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-53223441203bfec4"></script>
+    <script type="text/javascript">
+      addthis.layers({
+        theme: 'transparent',
+        share: { services: 'facebook,twitter,google_plusone_share', 'position' : 'right', 'numPreferredServices' : 4, 'mobile': true, 'desktop': true }
+      });
+    </script>
+    <!-- AddThis Smart Layers END -->
   </body>
 </html>
