@@ -49,14 +49,14 @@ $(document).ready(function() {
           google.maps.event.addListener(map, 'click', closeInfoWindow);
 
           var link = menuTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, index: markers.length });
-          $("#sidebar-wrapper nav").append(link);
+          $("#sidebar-wrapper nav div.list-group").append(link);
 
           markers.push(marker);
 
         });
         var markerCluster = new MarkerClusterer(map, markers, { gridSize: 50, maxZoom: 13 });
 
-        var startups = $('#sidebar-wrapper nav a.startup');
+        var startups = $('#sidebar-wrapper nav div.list-group a.startup');
         startups.on('click', function() {
           focusStartup($(this).data('index'));
           startups.removeClass('active');

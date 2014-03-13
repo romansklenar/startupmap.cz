@@ -17,6 +17,7 @@
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" type="text/css" rel="stylesheet">
     <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600&subset=latin,latin-ext" type="text/css" rel="stylesheet">
     <link href="/assets/stylesheets/application.css" type="text/css" rel="stylesheet">
+    <title>StartupMap.cz | České startupy na mapě</title>
   </head>
   <body>
     <div id="wrapper">
@@ -25,14 +26,16 @@
         <header>
           <a id="logo" href="#"><img src="/assets/images/logo.png"></a>
           <p>Mapa startupů v ČR</p>
+          <a href="#" class="list-group-item brand">Startupy <span id="counter" class="badge pull-right"></span></a>
         </header>
 
-        <nav class="list-group">
-          <a href="#" class="list-group-item brand">Startupy <span id="counter" class="badge pull-right"></span></a>
+        <nav>
+          <div class="list-group">
+          </div>
         </nav>
 
         <footer>
-          <a href="http://www.startupjobs.cz/o-startupjobs" data-toggle="modal" data-target="#about">O StartupMap</a>
+          <a href="#" data-toggle="modal" data-target="#about">O StartupMap</a>
           <a href="http://www.startupjobs.cz/pro-firmy">Přidat Startup</a>
           <a href="http://www.startupjobs.cz/">StartupJobs</a>
         </footer>
@@ -49,7 +52,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-            <h2 class="modal-title" id="myModalLabel">O StartupMap.cz</h2>
+            <h2 class="modal-title">O StartupMap.cz</h2>
           </div>
           <div class="modal-body">
             <p class="lead"><b>Všechny startupy, které mají adresu na jednom místě vám přináší StartupJobs.</b></p>

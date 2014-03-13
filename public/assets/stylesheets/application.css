@@ -27,10 +27,7 @@ body {
   color: #747d93;
   position: fixed;
   height: 100%;
-  overflow-y: auto;
-  z-index: 1000;
   transition: all 0.4s ease 0s;
-  /*overflow: scroll;*/
 }
 
 #sidebar-wrapper,
@@ -48,19 +45,27 @@ body {
 }
 
 #sidebar-wrapper nav {
-  overflow: scroll;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 225px;
+}
+
+#sidebar-wrapper nav div {
+  overflow: auto;
+  height: 100%;
+  width: 100%;
 }
 
 #sidebar-wrapper header #logo img {
-  margin: 20px 25px;
+  margin: 20px 0;
 }
 
 #sidebar-wrapper header,
 #sidebar-wrapper footer {
-  /*position: absolute;*/
-  height: auto;
   width: 100%;
   text-align: center;
+  background-color: #363A47;
 }
 
 #sidebar-wrapper header {
@@ -69,8 +74,9 @@ body {
 
 #sidebar-wrapper footer {
   bottom: 0;
-  padding-bottom: 10px;
+  padding: 10px 0;
   font-size: 13px;
+  position: absolute;
 }
 
 #sidebar-wrapper footer a {
@@ -101,6 +107,7 @@ body {
   background-color: #494F60;
   border-left: 5px #ec503b solid;
   padding: 15px 20px;
+  text-align: left;
 }
 
 #sidebar-wrapper a.list-group-item > .badge,
@@ -151,6 +158,10 @@ div.startup .body p {
 
 div.startup hr {
   margin: 10px 0;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 
