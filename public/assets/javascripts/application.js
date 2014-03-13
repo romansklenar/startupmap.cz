@@ -32,7 +32,7 @@ $(document).ready(function() {
     var menuTemplate   = '<a href="#" data-index="{index}" class="startup list-group-item">{name}</a>'
 
     $.ajax({
-      url: "/feed.json", // "http://www.startupjobs.cz/map.php"
+      url: "http://www.startupjobs.cz/map.php",
       type: "GET",
       dataType: "json",
       crossDomain: true,
