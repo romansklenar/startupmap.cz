@@ -40,7 +40,7 @@ body {
   color: #989FB5;
 }
 
-#sidebar-wrapper p {
+#sidebar-wrapper header p {
   margin: auto 25px 25px;
 }
 
@@ -48,7 +48,7 @@ body {
   overflow: hidden;
   height: 100%;
   width: 100%;
-  padding-bottom: 225px;
+  padding-bottom: 260px;
 }
 
 #sidebar-wrapper nav div {
@@ -161,11 +161,15 @@ div.startup hr {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  /* display: none; */
 }
 
 .atss {
   top: 60%;
+}
+
+.addthis_toolbox {
+  margin: 0 75px 5px;
 }
 
 
