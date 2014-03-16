@@ -80,6 +80,8 @@ $(document).ready(function() {
       return false;
     });
 
+    $(".list-group").niceScroll({ touchbehavior: false, cursorcolor: "#999", cursorborder: 'none', cursoropacitymax: 0.7, cursorwidth: 10, autohidemode: true });
+
     function focusStartup(index) {
       var marker = markers[index];
       map.setCenter(marker.position);
