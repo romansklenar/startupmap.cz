@@ -23,9 +23,12 @@ $(document).ready(function() {
     };
 
     var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-    var markerCluster = new MarkerClusterer(map);
     var infoWindow = new google.maps.InfoWindow();
     var markers = [];
+    var markerCluster = new MarkerClusterer(map);
+    var markerSpiderfier = new OverlappingMarkerSpiderfier(map);
+    markerSpiderfier.addListener('click', function(marker, event) { openInfoWindow(marker); });
+    markerSpiderfier.addListener('spiderfy', closeInfoWindow);
 
     var image = 'assets/images/pin_normal.png';
     var windowTemplate = '<div class="startup"><div class="heading"><h4><a href="{url}" target="_blank">{name}</a><br><small>{address}</small></h4></div><hr><div class="body"><p>{description}</p></div></div>'
@@ -43,15 +46,15 @@ $(document).ready(function() {
           var position = new google.maps.LatLng(this.latutide, this.longitude);
           var marker = new google.maps.Marker({ title: this.name, position: position, map: map, icon: image, data: this });
 
-          google.maps.event.addListener(marker, 'click', function() {
-            openInfoWindow(marker);
-          });
-          google.maps.event.addListener(map, 'click', closeInfoWindow);
+          // disabled in favor of OverlappingMarkerSpiderfier
+          // google.maps.event.addListener(marker, 'click', function() { openInfoWindow(marker); });
+          // google.maps.event.addListener(map, 'click', closeInfoWindow);
 
           var link = menuTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, index: markers.length });
           $("#sidebar-wrapper nav div.list-group").append(link);
 
           markers.push(marker);
+          markerSpiderfier.addMarker(marker);
 
         });
         var markerCluster = new MarkerClusterer(map, markers, { gridSize: 50, maxZoom: 13 });
