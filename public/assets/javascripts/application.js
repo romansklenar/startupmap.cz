@@ -90,10 +90,8 @@ $(document).ready(function() {
     };
 
     function openInfoWindow(marker) {
-      infoWindow.setOptions({
-        content: windowTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description }),
-        maxWidth: 280
-      });
+      var content = windowTemplate.supplant({ url: marker.data.url, name: marker.data.name, address: marker.data.address, description: marker.data.description });
+      infoWindow.setOptions({ content: content, maxWidth: 280 });
       infoWindow.open(map, marker);
     };
 
