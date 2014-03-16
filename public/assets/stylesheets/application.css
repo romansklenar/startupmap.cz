@@ -51,7 +51,7 @@ body {
   padding-bottom: 260px;
 }
 
-#sidebar-wrapper nav div {
+#sidebar-wrapper nav .list-group {
   overflow: auto;
   height: 100%;
   width: 100%;
@@ -84,7 +84,7 @@ body {
   padding-right: 5px;
 }
 
-#sidebar-wrapper a.list-group-item {
+#sidebar-wrapper .list-group-item {
   background-color: #272A32;
   border-color: #21242B;
   color: inherit;
@@ -92,15 +92,15 @@ body {
   padding: 10px 25px;
 }
 
-#sidebar-wrapper a.list-group-item:hover,
-#sidebar-wrapper a.list-group-item:focus,
-#sidebar-wrapper a.list-group-item.active {
+#sidebar-wrapper .list-group-item:hover,
+#sidebar-wrapper .list-group-item:focus,
+#sidebar-wrapper .list-group-item.active {
   background-color: #21242B;
   border-color: #FD2922;
   color: #CCCFDC;
 }
 
-#sidebar-wrapper a.list-group-item.brand {
+#sidebar-wrapper .list-group-item.brand {
   color: white;
   font-size: 16px;
   font-weight: 200;
@@ -110,16 +110,16 @@ body {
   text-align: left;
 }
 
-#sidebar-wrapper a.list-group-item > .badge,
-#sidebar-wrapper a.list-group-item.active > .badge {
+#sidebar-wrapper .list-group-item > .badge,
+#sidebar-wrapper .list-group-item.active > .badge {
   color: inherit;
   background-color: #3B4050;
   font-weight: 200;
   font-size: 16px;
 }
 
-#sidebar-wrapper a.list-group-item:first-child,
-#sidebar-wrapper a.list-group-item:last-child {
+#sidebar-wrapper .list-group-item:first-child,
+#sidebar-wrapper .list-group-item:last-child {
   border-radius: 0;
 }
 
