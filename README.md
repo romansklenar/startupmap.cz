@@ -1,20 +1,22 @@
 ## StartupMap.cz
-
-
-### Ruby & Rails version
-Exact version of ruby is specified in `.ruby-version` file in root of project. Also specifiy ruby version in `Gemfile`.
+Czech startups visualized on map.
 
 ### System dependencies
-Make sure you have installed [Pow](http://pow.cx/) and [Heroku Toolbelt](https://toolbelt.heroku.com/) in your system.
+Make sure you have installed [Pow](http://pow.cx/) in your system if you want to test project on your local computer.
 
 ### Configuration & Setup
-Use bundler to install and maintaing gem dependencies.
+```
+# clone repository
+mkdir ~/Sites/startupmap
+git clone git@github.com:romansklenar/startupmap.cz.git ~/Sites/startupmap
 
-### Services (APIs, job queues, cache servers, search engines, etc.)
-TODO
+# link project folder to Pow
+cd ~/.pow
+ln -s ~/Sites/startupmap
 
-### Deployment instructions
-TODO
+# open project in browser
+open startupmap.dev
+```
 
-### Issues
-We use [Github Issues](https://github.com/romansklenar/startupmap/issues) as an issue tracker. All related info is there.
+### Services
+We use [StartupJobs.cz](http://startupjobs.cz/map.php) API as data source to retreive list of startups.
