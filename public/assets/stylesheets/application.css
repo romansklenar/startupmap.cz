@@ -160,10 +160,6 @@ div.startup hr {
   margin: 10px 0;
 }
 
-::-webkit-scrollbar {
-  /* display: none; */
-}
-
 .atss {
   top: 60%;
 }
