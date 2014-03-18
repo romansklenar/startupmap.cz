@@ -1,0 +1,4 @@
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} ^startupmap\.cz
+RewriteRule ^(.*)$ http://www.startupmap.cz/$1 [R=301,QSA,L]
